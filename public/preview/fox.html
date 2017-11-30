@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html data-design-width="640" data-design-font="100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="闪购">
+        <meta name="aplus-terminal" content="1">
+        <meta name="aplus-touch" content="1">
+        <meta name="format-detection" content="telephone=no, address=no">
+        <title>移动端预览</title>
+        <link rel="stylesheet" type="text/css" href="../build/css/common.css">
+        <link rel="stylesheet" type="text/css" href="../build/css/register.css">
+        <link rel="stylesheet" type="text/css" href="../lib/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="http://st.360buyimg.com/common/commonH_B/css/header.css">
+        <script>
+            var pageConfig = {
+                debug: true
+            }
+
+            var html_dom = document.getElementsByTagName('html')[0];
+            var design_width = parseInt(html_dom.dataset.designWidth, 10);
+            var design_font = parseInt(html_dom.dataset.designFont, 10);
+            var isMobile = /Mobile/.test(window.navigator.userAgent);
+
+            resizeRoot();
+
+            if(isMobile) {
+                redirect();
+            }
+
+            window.onresize = function() {
+                resizeRoot();
+            }
+
+            function resizeRoot() {
+                var client_width = document.documentElement.clientWidth;
+
+                if (!isMobile && client_width >= 640) {
+                    client_width = 640;
+                }
+
+                var fs = client_width / design_width * design_font;
+
+                html_dom.style.fontSize = fs + "px";
+            }
+
+            function imgError(img) {
+                img.style.opacity = 0;
+            }
+
+            function redirect() {
+                var href = window.location.href;
+                var appRe = /\/app\//;
+                var mRe = /\/m\//;
+                var ua = window.navigator.userAgent;
+                var jdAppRe = /jdapp/;
+
+                if(jdAppRe.test(ua)) {
+                    // is app
+                    if(mRe.test(href)) {
+                        href = href.replace(mRe, '/app/');
+                        window.location.href = href;
+                    }
+                }else{
+                    // is m
+                    if(appRe.test(href)) {
+                        href = href.replace(appRe, '/m/');
+                        window.location.href = href;
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body data-sid="" data-vs="" data-total-page="1" data-page="1" data-total-page="1" data-title="京东闪购·品牌特卖" data-link="" data-lazy-load="off" data-type="102" data-pic-qua="35" data-notload-header="" class="body_overflow" data-priceswitch="">
+        <div class="red-page anima-scroll-page">
+            <header id="header">
+                <!-- 公共头部开始 -->
+                <div class="jd-nav" id="jd-nav">
+                    <div id="jd-tip"></div>
+                    <div id="jd-header"></div>
+                </div>
+                <!-- 公共头部结束 -->
+            </header>
+            <!-- 内容区域开始 -->
+            <div class="red-content anima-scroll-view" id="scroll-view">
+                <div class="scroller pb85" id="scroller">
+                    
+                </div>
+            </div>
+            <!-- 内容区域结束 -->
+        </div>
+        <script src="../lib/anima-scroll.js" type="text/javascript"></script>
+        <script src="http://st.360buyimg.com/common/commonH_B/js/m_common_header_bottom2.1.js" type="text/javascript"></script>
+        <script src="http://st.360buyimg.com/common/commonH_B/js/m_common2.1.js" type="text/javascript"></script>
+        <script src="http://st.360buyimg.com/m/js/2014/module/plugIn/downloadAppPlugIn_imk2.js" type="text/javascript"></script>
+        <script src="../build/javascripts/common.js" type="text/javascript"></script>
+        <script src="../build/javascripts/fox.js" type="text/javascript"></script>
+    </body>
+</html>
