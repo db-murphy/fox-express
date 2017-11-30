@@ -62,7 +62,7 @@ router.post('/uploadpic', upload, function(req, res) {
     var url = req.files.picture.path.split('public/')[1];
     console.log(url)
     return res.status(200).json({
-        url: 'http://127.0.0.1:3100/' + url
+        url: '/' + url
     });
 });
 
