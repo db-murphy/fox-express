@@ -1,0 +1,76 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>迅狐</title><link type=image/x-icon href=./favicon.ico rel=icon><link href=./static/video.css rel=stylesheet type=text/css><script type=text/javascript src=./static/video.js></script><link href=/static/css/app.4e9263dcaf8a217e4496b9e5b4f79b46.css rel=stylesheet></head><body><script type=text/javascript src=./static/useragent-base.js></script><script type=text/javascript src=./static/ua-device.js></script><style type=text/css>.browser-waring *{
+            margin: 0;
+            padding: 0;
+        }
+        .browser-waring{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2000;
+            background-color: #3a3a3a;
+        }
+
+        .browser-waring h1{
+            color: #cacaca;
+            font-size: 34px;
+            padding: 30px 0;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .browser-list{
+            /*overflow: hidden;*/
+            padding: 0 10px;
+            height: 200px;
+            position: absolute;
+            width: 900px;
+            left: 50%;
+            top: 50%;
+            margin: -100px -450px;
+        }
+
+        .browser-list:before,.browser-list:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        .browser-list li{
+            width: 16.666666666%;
+            height: 200px;
+            float: left;
+            list-style: none;
+        }
+
+        .browser-list li a{
+            display: block;
+            height: 175px;
+            color: #cacaca;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+
+        .browser-list li a:hover{
+            text-decoration: underline;
+        }
+
+        .browser-list li img{
+            width: 118px;
+            height: 118px;
+            margin: 0 auto;
+        }
+
+        .browser-list li p{
+            padding-top: 34px;
+            text-align: center;
+        }</style><div class=browser-waring id=browser-waring style="display: none"><h1><p>为保证良好体验, 请使用高级浏览器!</p></h1><ul class=browser-list><li><a href=//www.google.cn/chrome/browser/desktop/index.html target=_blank><img src=./static/chrome.png alt=""><p class=name>安装 Chrome</p></a></li><li><a href=//browser.qq.com/ target=_blank><img src=./static/QQ.png alt=""><p class=name>安装 QQ</p></a></li><li><a href=//support.apple.com/downloads/safari target=_blank><img src=./static/safari.png alt=""><p class=name>安装 Safari</p></a></li><li><a href=//www.firefox.com.cn/download/ target=_blank><img src=./static/firefox.png alt=""><p class=name>安装 Firefox</p></a></li><li><a href=//se.360.cn/ target=_blank><img src=./static/360.png alt=""><p class=name>安装 360</p></a></li><li><a href=//www.microsoft.com/en-us/windows/microsoft-edge target=_blank><img src=./static/ie.png alt=""><p class=name>安装 IE Edge</p></a></li></ul></div><script type=text/javascript>var browser = ['Chrome', 'QQ Browser', 'Safari', 'Firefox', 'Opera'];
+		var output = new uaDevice(navigator.userAgent);
+
+        if(browser.indexOf(output.browser.name) == -1) {
+            document.getElementById('browser-waring').style.display = 'block';
+        }</script><div id=app></div><script type=text/javascript src=/static/js/manifest.affe6b1d9423d27a0e99.js></script><script type=text/javascript src=/static/js/vendor.5528f0df985f436e5d37.js></script><script type=text/javascript src=/static/js/app.f55022a1bc6dd5a4ea95.js></script></body></html>

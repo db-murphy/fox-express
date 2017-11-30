@@ -1,0 +1,1 @@
+exports.price_index = require('./price_index');

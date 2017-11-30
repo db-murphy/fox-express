@@ -1,0 +1,10 @@
+{
+	"apps": [
+		{
+			"name": "fox-app",
+			"script": "bin/www",
+			"node_args": "--harmony",
+			"instances": 6
+		}
+	]
+}

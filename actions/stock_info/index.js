@@ -1,0 +1,1 @@
+exports.stock_index = require('./stock_index');
