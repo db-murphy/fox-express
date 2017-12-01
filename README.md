@@ -10,4 +10,4 @@ npm install pm2 -g
 pm2 start app.json
 ```
 
-![tu](./doc/demos1.png)
+![示例图](./doc/demos1.png)
