@@ -1,3 +1,3 @@
-reddata_mock
+SmartFox
 ====
-针对闪购前端开发异步请求数据模拟
+可视化搭建UI
