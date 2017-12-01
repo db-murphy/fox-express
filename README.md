@@ -5,5 +5,7 @@ SmartFox
 ```
 npm install
 
-npm start
+npm install pm2 -g
+
+pm2 start app.json
 ```
